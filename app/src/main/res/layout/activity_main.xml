@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativemain"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+
+    >
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </include>
+
+    <TextView
+
+        android:id="@+id/packageSelectTV"
+        android:layout_below="@id/app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:text="Select Data Package"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/accent_material_light" />
+
+    <RadioGroup
+        android:id="@+id/radiogrp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/packageSelectTV"
+        android:paddingLeft="60dp"
+        android:paddingTop="15dp">
+
+        <RadioButton
+            android:id="@+id/radiod3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/D3" />
+
+        <RadioButton
+            android:id="@+id/radiod24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/D24" />
+
+        <RadioButton
+            android:id="@+id/radiod89"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D89" />
+
+
+    </RadioGroup>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radiogrp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/packageSelectTV"
+        android:layout_toRightOf="@+id/packageSelectTV"
+        android:src="@mipmap/ic_send"
+        fab:fab_colorNormal="@color/material_deep_teal_500">
+         </com.melnykov.fab.FloatingActionButton>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/radiogrp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+
+        >
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/checkBalanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:paddingBottom="16dp"
+            android:src="@mipmap/ic_data_balance"
+            fab:fab_colorNormal="#f50057" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/rechargeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_account"
+            fab:fab_colorNormal="#ff5722" />
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@mipmap/ic_wifi"
+            fab:fab_colorNormal="#000000" />
+
+
+    </LinearLayout>
+
+    <android.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/linearlayoutbuttons" />
+</RelativeLayout>

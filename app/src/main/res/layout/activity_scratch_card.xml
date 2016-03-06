@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    tools:context=".ScratchCardActivity">
+
+    <include
+        android:id="@+id/app_bar_scratch_card"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </include>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/app_bar_scratch_card"
+        android:id="@+id/cardList"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp" />
+</RelativeLayout>
